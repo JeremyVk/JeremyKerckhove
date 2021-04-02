@@ -16,6 +16,15 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Serif:wght@400;700&display=swap"
         rel="stylesheet">
     <title>Jérémy Kerckhove</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FZ71TZ3EF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5FZ71TZ3EF');
+</script>
 </head>
 
 <body>
@@ -214,7 +223,7 @@
             <img src="img/logo-blanc.jpg" alt="Logo Jérémy Kerckhove Développeur Web">
 
         </div>
-        <p> <a href="mailto:jeremy.kerckhove@gmail.com"><strong>Adresse-mail: </strong>jeremy.kerckhove@gmail.com</a> </p>
+        <p> <a href="mailto:contact@jeremy-kerckhove.com"><strong>Adresse-mail: </strong>contact@jeremy-kerckhove.com</a> </p>
         <p> &copy 2021 Tous droits réservés</p>
     </footer>
     <script src="app.js"></script>
