@@ -20,7 +20,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: 'Open Sans', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* HEADER */
 
 header {
@@ -78,7 +80,9 @@ header nav a {
     font-weight: bold;
     font-size: 1.1rem;
     transition: all 0.6s ease;
+    scroll-behavior: smooth;
 }
+
 
 header nav a:hover {
     color: #265B90;
@@ -88,7 +92,6 @@ header nav a:hover {
     min-width: 300px;
     width: 70vw;
     max-width: 900px;
-    
 }
 
 /* PRESTATIONS */
@@ -99,9 +102,11 @@ header nav a:hover {
     margin-top: 100px;
     padding: 30px 0px;
 }
+
 .presentation {
     margin-bottom: 40px;
 }
+
 .presentation h1 {
     padding-top: 60px;
 }
@@ -134,7 +139,6 @@ header nav a:hover {
     display: grid;
     grid-template: 350px 100px / repeat(auto-fill, 33.3%);
     justify-content: space-between;
-    
 }
 
 #item1 {
@@ -156,6 +160,7 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
 }
+
 .btn-action {
     margin-top: 10px;
     padding: 10px 40px;
@@ -164,7 +169,19 @@ header nav a:hover {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     border: none;
-    font-size: 1.1rem
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.btn-action, .btn-realisation {
+    transition: all 0.8s ease;
+}
+
+.btn-action:hover, .mes-realisations .btn-realisation:hover {
+    color: #469CDC;
+    background-color: white;
+    border: 1px solid rgba(51, 51, 51, 0.56);
 }
 
 .item-prestation {
@@ -196,6 +213,7 @@ header nav a:hover {
 #item3 {
     border-bottom: 1px solid rgba(51, 51, 51, 0.56);
 }
+
 /* MES REALISATIONS */
 
 #realisations {
@@ -204,6 +222,7 @@ header nav a:hover {
     font-size: 1.8rem;
     margin-top: 40px;
 }
+
 .mes-realisations {
     margin: 60px auto;
     width: 100%;
@@ -216,43 +235,47 @@ header nav a:hover {
 }
 
 .item-realisation {
-    border:1px solid rgba(51, 51, 51, 0.56);
+    border: 1px solid rgba(51, 51, 51, 0.56);
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.25);
     border-radius: 51px;
     width: 400px;
-    height: 280px;
+    height: auto;
     text-align: center;
     margin: 0 auto;
     padding: 10px;
     position: relative;
-
 }
+
 .item-realisation h4 {
     font-size: 1.6rem;
-    
 }
-.item-realisation .logo-real img{
+
+.item-realisation .logo-real img {
     width: 300px;
     position: relative;
-    top:0;
-    left:0;
-    transform: translate(0,0)
+    top: 0;
+    left: 0;
+    transform: translate(0, 0)
 }
+
 .real-separator {
     border-top: 1px solid #469CDC;
     width: 60%;
     margin: 10px auto;
 }
+
 .item-realisation ul {
     margin-top: 20px;
 }
+
 .item-realisation ul li {
     text-align: start;
-    margin-left:45px;
+    margin-left: 45px;
     line-height: 2rem;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
 }
+
 .item-realisation a.btn-realisation {
     padding: 10px 40px;
     background-color: #469CDC;
@@ -263,44 +286,154 @@ header nav a:hover {
     border-radius: 5px;
     display: block;
     width: 200px;
-    margin: 30px auto 0;
-    
+    margin: 10px auto;
 }
+
 .item-realisation img {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 /* RESEAUX */
+
 section.reseaux {
     display: flex;
     justify-content: center;
 }
+
 .item-reseaux {
-    border:1px solid rgba(51, 51, 51, 0.56);
+    border: 1px solid rgba(51, 51, 51, 0.56);
     box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.25);
     height: 300px;
     width: 450px;
     padding: 20px;
     border-radius: 51px;
 }
-.item-reseaux h4{
+
+.item-reseaux h4 {
     color: #469CDC;
     font-size: 1.6rem;
     text-align: center;
-    
 }
+
 .reseaux-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
+
 .item-reseaux svg {
     width: 100px;
     margin: 0 10px;
+}
+
+.insta img {
+    width: 110px;
+}
+
+/* FORMULAIRE DE CONTACT */
+
+.contact {
+    background-color: #469CDC;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact h5 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+.contact form {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-item {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-item label {
+    color: white;
+    font-family: 'Pt Serif', serif;
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+.form-item input, .form-item textarea{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    border: none;
+    border-bottom: 1px solid grey;
+    border-radius: 5px;
+    width: 600px;
+}
+.form-item input#E-mail {
+    padding:  5px 20px;
+    height: 50px;
+}
+.form-item #content {
+    padding: 5px;
+}
+.contact form button {
+    border: none;
+    padding: 10px 60px;
+    color: #469CDC;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgba(51, 51, 51, 0.56);
+    font-family: 'Pt Serif', serif;
+    transition: all 0.7s ease;
+    margin-bottom: 20px;
+}
+.contact form button:hover {
+    color: white;
+    background-color: #469CDC;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #265B90;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-bottom: 100px;
+}
+.footer-logo {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 50px;
+    
+}
+footer img {
+    width: 300px;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer p {
+margin-top: 30px;
 }
 /* Mobiles */
 
@@ -325,7 +458,7 @@ section.reseaux {
     }
 }
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 860px) {
     .mes-realisations {
         display: flex;
         flex-direction: column;
@@ -336,7 +469,7 @@ section.reseaux {
     .prestations {
         display: flex;
         flex-direction: column;
-        width: 80%
+        width: 80%;
     }
     .item-prestation {
         padding-bottom: 40px;
@@ -344,26 +477,31 @@ section.reseaux {
     #item1, #item2, #item3 {
         border-right: none;
     }
+    .form-item input, .form-item textarea {
+        width: 70vw;
+    }
 }
 
 @media screen and (max-width: 478px) {
-
     .item-realisation {
         width: 300px;
-        height: 320px;;
+        height: auto;
+    }
+    .prochainement {
+        height: 320px;
     }
     .item-realisation img {
         width: 80%;
     }
     .item-realisation .logo-real img {
         width: 250px;
-        margin-top: 10px;   
+        margin-top: 10px;
     }
     .item-reseaux {
         width: 80%;
     }
-    .item-reseaux svg {
+    .item-reseaux svg, .insta img {
         width: 50px;
     }
-    
+
 }
