@@ -1,3 +1,5 @@
+
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -42,7 +44,7 @@
             </ul>
         </nav>
         <div class="logo">
-            <img src="img/logo.png" alt="">
+            <img src="img/logo.png" alt="Logo Jeremy Kerckhove développeur Web">
         </div>
     </header>
 
@@ -127,7 +129,7 @@
                </ul>
                 <a class="btn-realisation" href="https://jeremyvk.github.io/Diouet/">Découvrir</a>
             </div>
-            <div class="item-realisation prochainement"><img src="img/prochainement.png" alt=""></div>
+            <div class="item-realisation prochainement"><img src="img/prochainement.png" alt="Création qui arrivera prochainement"></div>
         </div>
     </section>
 
@@ -157,7 +159,7 @@
                         
                     </div>
                 <div class="item-icon insta">
-                    <img src="img/icons/instagram.png" alt="">
+                    <img src="img/icons/instagram.png" alt="Logo d'Instagram">
                         
                 </div>
                 <div class="item-icon">
@@ -179,14 +181,29 @@
 
     <section class="contact" id="contact">
         <h5>Me contacter</h5>
-        <form action="">
+        <?php 
+        if(!empty($_SESSION['errors'])): ?>
+        <div class="danger">
+            <?php
+            foreach($_SESSION['errors'] as $error) {
+                echo "<p>" .$error. "<p>";
+            } ?>
+        </div>
+            <?php endif; ?>
+        <?php if(isset($_SESSION['success'])): ?>
+            <div class="success">
+            <p> Votre message a bien été envoyé, je reviendrai vers vous d'ici peu.</p>
+            </div>
+        <?php endif; ?>
+   
+        <form action="traitement_contact.php"method="post">
             <div class="form-item">
                 <label for="E-mail">E-mail</label>
-                <input type="text" id="E-mail">
+                <input type="email" name="email" id="E-mail">
             </div>
             <div class="form-item">
                 <label for="content">Votre demande</label>
-                <textarea name="" id="content" cols="30" rows="10"></textarea>
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
             </div>
             <button type="submit">Envoyer</button>
         </form>
@@ -202,5 +219,5 @@
     </footer>
     <script src="app.js"></script>
 </body>
-
+<?php session_unset();?>
 </html>

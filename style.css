@@ -435,6 +435,44 @@ footer a:hover {
 footer p {
 margin-top: 30px;
 }
+
+/* ERREURS FORMULAIRE DE CONTACT */
+.contact .danger {
+    width: 60vw;
+    min-width: 300px;
+    max-width: 600px;
+    /* background-color: #ff071d; */
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.danger p {
+    margin-top: 10px;
+    padding: 5px 0;
+    font-weight: bold;
+    color: #FD3D00;
+}
+.success {
+    width: 60vw;
+    min-width: 300px;
+    max-width: 600px;
+    /* background-color: #ff071d; */
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.success p {
+    margin-top: 10px;
+    padding: 5px 0;
+    font-weight: bold;
+    color: #3DBD3A;
+}
+
 /* Mobiles */
 
 @media screen and (min-width: 460px) {
